@@ -1,6 +1,7 @@
 <?php
 
 require_once 'tools.php';
+require_once '../vendor/autoload.php';
 
 class pdfGenerator{
  #region properties
@@ -16,10 +17,10 @@ class pdfGenerator{
 #region Constructor
  public function __construct(string $cachePath = "", string $savePath = "", string $fileName = ""){
   $this->customConfigs();
-  $this->pdfInstance = $this->createInstance();
   empty($cachePath) ? null : $this->cachePath = $cachePath;
   empty($savePath) ? null : $this->savePath = $savePath;
   empty($fileName) ? null : $this->fileName = $fileName;
+  $this->pdfInstance = $this->createInstance();
  }
 #endregion
 
@@ -41,7 +42,7 @@ class pdfGenerator{
    $this->configs[$configKey] = $configValue;
  }
 
- public function setInstance(pdfGenerator $instance){
+ public function setInstance(object $instance){
    is_null($instance) ? $this->pdfInstance = $instance : null;
  }
 
@@ -111,7 +112,7 @@ class pdfGenerator{
  }
 
  protected function createInstance(){
-
+   $this->setInstance(null);
  }
  #endregion
 }
