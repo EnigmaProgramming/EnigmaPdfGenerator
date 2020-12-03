@@ -1,4 +1,7 @@
 <?php
+
+require_once 'tools.php';
+
 class pdfGenerator{
  #region properties
   protected $configs = array();
@@ -29,9 +32,14 @@ class pdfGenerator{
    $returnVal = "";
 
    if(isset($tempUserConstants['user'])){
-     $returnVal = $tempUserConstants['user'];
+     $tArray = [];
+     foreach($tempUserConstants['user'] as $k => $v){
+       if(Tools::startsWith($k,'pdf_')){
+         $tArray[substr($k,4)] = $v;
+       }
+     }
+     $returnVal = $tArray;
    }
-
    return $returnVal;
  }
  #endregion
