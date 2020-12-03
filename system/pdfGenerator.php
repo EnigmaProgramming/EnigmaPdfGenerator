@@ -1,7 +1,9 @@
 <?php
 
 require_once 'tools.php';
-require_once '../vendor/autoload.php';
+require_once 'formats.php';
+require_once 'orientations.php';
+require_once dirname(dirname(__FILE__)).'/vendor/autoload.php';
 
 class pdfGenerator{
  #region properties
@@ -59,7 +61,7 @@ class pdfGenerator{
  * @param string $savePath
  * @param string $fileName
  */
- public function __construct(PdfFormats $format, PdfOrientation $orientation, string $cachePath = "", string $savePath = "", string $fileName = ""){
+ public function __construct(string $format, string $orientation, string $cachePath = "", string $savePath = "", string $fileName = ""){
   $this->customConfigs();
   empty($cachePath) ? null : $this->cachePath = $cachePath;
   empty($savePath) ? null : $this->savePath = $savePath;
@@ -260,7 +262,7 @@ class pdfGenerator{
   */
  protected function createInstance(){
    if(!empty($this->configs)){
-     $i = new \Mpdf($this->configs);
+     $i = new \Mpdf\Mpdf($this->configs);
    }else{
      $i = new \Mpdf();
    }
