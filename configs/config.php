@@ -3,6 +3,12 @@
 // this file will contain the configurations for the pdf parser as global values.
 // the values are set to the default then commented, to activate a specific config, just remove the comment and set the value to the one you want to use.
 
+#region Custom Configurations
+define("pdf_mode","utf-8");
+define("pdf_format","A4-L");
+define("pdf_orientation","P");
+#endregion
+
 #region Paging
 //define("pdf_mirrorMargins",0);
 //define("pdf_forcePortraitMargins",false);

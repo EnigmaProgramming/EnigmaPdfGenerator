@@ -207,6 +207,15 @@ class pdfGenerator{
  public function getFileName(){
    return $this->fileName;
  }
+
+ /**
+  * output the pdf file to the browser
+  *
+  * @return void
+  */
+ public function outputFileToBrowser(){
+   $this->pdfInstance->Output();
+ }
  #endregion
  #endregion
 
@@ -248,7 +257,20 @@ class pdfGenerator{
   * @return void
   */
  protected function createInstance(){
-   $this->setInstance(null);
+   if(!empty($this->configs)){
+     $i = new \Mpdf($this->configs);
+   }else{
+     $i = new \Mpdf();
+   }
+   $this->setInstance($i);
+ }
+
+ protected function createHtml(){
+   if(!is_null($this->currentDisplayString)){
+     $this->pdfInstance->writeHTML($this->currentDisplayString);
+   }else{
+     throw new Exception;
+   }
  }
  #endregion
 }
