@@ -4,20 +4,20 @@
 // the values are set to the default then commented, to activate a specific config, just remove the comment and set the value to the one you want to use.
 
 #region Paging
-//define("mirrorMargins",0);
-//define("forcePortraitMargins",false);
-//define("displayDefaultOrientation",false);
-//define("autoPageBreak",true);
-//define("setAutoTopMargin",false);
-//define("setAutoBottomMargin",false);
-//define("autoMarginPadding",2);
-//define("margBuffer",2);
-//define("printers_info",false);
-//define("bleedMargin",5);
-//define("crossMarkMargin",5);
-//define("cropMarkMargin",8);
-//define("nonPrintMargin",8);
-//define("defaultPagebreakType",'cloneall');
+define("mirrorMargins",0);
+define("forcePortraitMargins",false);
+define("displayDefaultOrientation",false);
+define("autoPageBreak",true);
+define("setAutoTopMargin",false);
+define("setAutoBottomMargin",false);
+define("autoMarginPadding",2);
+define("margBuffer",2);
+define("printers_info",false);
+define("bleedMargin",5);
+define("crossMarkMargin",5);
+define("cropMarkMargin",8);
+define("nonPrintMargin",8);
+define("defaultPagebreakType",'cloneall');
 #endregion
 
 #region Page Numbering
@@ -62,7 +62,7 @@
 //define("text_input_as_HTML",false);
 //define("progressBar",false);
 //define("progbar_heading","mPDF file progress");
-//define("progbad_altHTML","");
+//define("progbar_altHTML","");
 //define("incrementFPR1 [1-4]",10,20,30,50);
 #endregion
 
