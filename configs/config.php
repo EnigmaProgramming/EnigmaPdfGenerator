@@ -4,20 +4,20 @@
 // the values are set to the default then commented, to activate a specific config, just remove the comment and set the value to the one you want to use.
 
 #region Paging
-define("pdf_mirrorMargins",0);
-define("pdf_forcePortraitMargins",false);
-define("pdf_displayDefaultOrientation",false);
-define("pdf_autoPageBreak",true);
-define("pdf_setAutoTopMargin",false);
-define("pdf_setAutoBottomMargin",false);
-define("pdf_autoMarginPadding",2);
-define("pdf_margBuffer",2);
-define("pdf_printers_info",false);
-define("pdf_bleedMargin",5);
-define("pdf_crossMarkMargin",5);
-define("pdf_cropMarkMargin",8);
-define("pdf_nonPrintMargin",8);
-define("pdf_defaultPagebreakType",'cloneall');
+//define("pdf_mirrorMargins",0);
+//define("pdf_forcePortraitMargins",false);
+//define("pdf_displayDefaultOrientation",false);
+//define("pdf_autoPageBreak",true);
+//define("pdf_setAutoTopMargin",false);
+//define("pdf_setAutoBottomMargin",false);
+//define("pdf_autoMarginPadding",2);
+//define("pdf_margBuffer",2);
+//define("pdf_printers_info",false);
+//define("pdf_bleedMargin",5);
+//define("pdf_crossMarkMargin",5);
+//define("pdf_cropMarkMargin",8);
+//define("pdf_nonPrintMargin",8);
+//define("pdf_defaultPagebreakType",'cloneall');
 #endregion
 
 #region Page Numbering
