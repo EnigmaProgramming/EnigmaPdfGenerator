@@ -59,11 +59,13 @@ class pdfGenerator{
  * @param string $savePath
  * @param string $fileName
  */
- public function __construct(string $cachePath = "", string $savePath = "", string $fileName = ""){
+ public function __construct(PdfFormats $format, PdfOrientation $orientation, string $cachePath = "", string $savePath = "", string $fileName = ""){
   $this->customConfigs();
   empty($cachePath) ? null : $this->cachePath = $cachePath;
   empty($savePath) ? null : $this->savePath = $savePath;
   empty($fileName) ? null : $this->fileName = $fileName;
+  $this->setSingleConfig('format',$format);
+  $this->setSingleConfig('orientation',$orientation);
   $this->pdfInstance = $this->createInstance();
  }
 #endregion

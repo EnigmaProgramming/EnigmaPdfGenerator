@@ -1,8 +1,7 @@
 <?php
 
-require_once './configs/config.php';
-require_once './system/pdfGenerator.php';
+require_once 'pdfBootstrap.php';
 
-$pdf = new pdfGenerator();
+$pdf = new pdfGenerator(PdfFormats::F_LETTER,PdfOrientation::O_PORTRAIT);
 
 $pdf->display();

@@ -3,10 +3,16 @@
 // this file will contain the configurations for the pdf parser as global values.
 // the values are set to the default then commented, to activate a specific config, just remove the comment and set the value to the one you want to use.
 
-#region Custom Configurations
+#region Constructor Configurations
 define("pdf_mode","utf-8");
-define("pdf_format","A4-L");
-define("pdf_orientation","P");
+define("pdf_default_font_size","");
+define("pdf_default_font","");
+define("pdf_margin_left",15);
+define("pdf_margin_right",15);
+define("pdf_margin_top",16);
+define("pdf_margin_bottom",16);
+define("pdf_margin_header",9);
+define("pdf_margin_footer",9);
 #endregion
 
 #region Paging
@@ -19,7 +25,7 @@ define("pdf_orientation","P");
 //define("pdf_autoMarginPadding",2);
 //define("pdf_margBuffer",2);
 //define("pdf_printers_info",false);
-//define("pdf_bleedMargin",5);
+//define("pdf_bleedMargin",5);"
 //define("pdf_crossMarkMargin",5);
 //define("pdf_cropMarkMargin",8);
 //define("pdf_nonPrintMargin",8);
