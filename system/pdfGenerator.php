@@ -3,7 +3,7 @@
 require_once 'tools.php';
 require_once 'formats.php';
 require_once 'orientations.php';
-require_once dirname(dirname(__FILE__)).'/vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 class pdfGenerator{
  #region properties
@@ -69,6 +69,8 @@ class pdfGenerator{
   $this->setSingleConfig('format',$format);
   $this->setSingleConfig('orientation',$orientation);
   $this->pdfInstance = $this->createInstance();
+
+  var_dump($this->pdfInstance);
  }
 #endregion
 
@@ -262,7 +264,7 @@ class pdfGenerator{
   */
  protected function createInstance(){
    if(!empty($this->configs)){
-     $i = new \Mpdf\Mpdf($this->configs);
+     $i = new \Mpdf($this->configs);
    }else{
      $i = new \Mpdf();
    }
