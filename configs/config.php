@@ -13,6 +13,7 @@ define("pdf_margin_top",16);
 define("pdf_margin_bottom",16);
 define("pdf_margin_header",9);
 define("pdf_margin_footer",9);
+define("pdf_DusplayMode",'fullpage');
 #endregion
 
 #region Paging

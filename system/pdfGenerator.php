@@ -29,27 +29,6 @@ class pdfGenerator{
    */
   protected $currentDisplayString = null;
 
-  /**
-   * contains the cache path for the pdf
-   *
-   * @var string
-   */
-  protected $cachePath;
-
-  /**
-   * contains the save path for the pdf
-   *
-   * @var string
-   */
-  protected $savePath;
-
-  /**
-   * contains the filename for the pdf
-   *
-   * @var string
-   */
-  protected $fileName;
-
 #endregion
 
 #region Constructor
@@ -57,20 +36,14 @@ class pdfGenerator{
 /**
  * constructor
  *
- * @param string $cachePath
- * @param string $savePath
- * @param string $fileName
+ * @param string $format
+ * @param string $orientation
  */
- public function __construct(string $format, string $orientation, string $cachePath = "", string $savePath = "", string $fileName = ""){
+ public function __construct(string $format, string $orientation){
   $this->customConfigs();
-  empty($cachePath) ? null : $this->cachePath = $cachePath;
-  empty($savePath) ? null : $this->savePath = $savePath;
-  empty($fileName) ? null : $this->fileName = $fileName;
   $this->setSingleConfig('format',$format);
   $this->setSingleConfig('orientation',$orientation);
   $this->pdfInstance = $this->createInstance();
-
-  var_dump($this->pdfInstance);
  }
 #endregion
 
@@ -123,37 +96,7 @@ class pdfGenerator{
   * @return void
   */
  public function setDisplayString(string $displayString){
-   is_null($displayString) ? $this->currentDisplayString = $displayString : null;
- }
-
- /**
-  * set the cache path for the pdf
-  *
-  * @param string $cachePath
-  * @return void
-  */
- public function setCachePath(string $cachePath){
-   is_null($cachePath) ? $this->cachePath = $cachePath : null;
- }
-
- /**
-  * set the save path for the pdf
-  *
-  * @param string $savePath
-  * @return void
-  */
- public function setSavePath(string $savePath){
-   is_null($savePath) ? $this->savePath = $savePath : null;
- }
-
- /**
-  * set the file name for the pdf
-  *
-  * @param string $fileName
-  * @return void
-  */
- public function setFileName(string $fileName){
-   is_null($fileName) ? $this->fileName = $fileName : null;
+   empty($displayString) ? $this->currentDisplayString = $displayString : null;
  }
  #endregion
 
@@ -188,41 +131,22 @@ class pdfGenerator{
  }
 
  /**
-  * returns the current cache path used for the pdf
-  *
-  * @return void
-  */
- public function getCachePath(){
-   return $this->cachePath;
- }
-
- /**
-  * returns the current save path used for the pdf
-  *
-  * @return void
-  */
- public function getSavePath(){
-   return $this->savePath;
- }
-
- /**
-  * returns the current file name used for the pdf
-  *
-  * @return void
-  */
- public function getFileName(){
-   return $this->fileName;
- }
-
- /**
   * output the pdf file to the browser
   *
   * @return void
   */
  public function outputFileToBrowser(){
-   $this->pdfInstance->Output();
+   return $this->pdfInstance->Output();
  }
  #endregion
+
+ public function createHtml(string $displayString = null){
+   if($displayString != null){
+     $this->pdfInstance->wirteHTML($displayString);
+     $this->currentDisplayString = $displayString;
+   }
+}
+
  #endregion
 
  #region protected functions
@@ -264,19 +188,11 @@ class pdfGenerator{
   */
  protected function createInstance(){
    if(!empty($this->configs)){
-     $i = new \Mpdf($this->configs);
+     $i = new \Mpdf\Mpdf($this->configs);
    }else{
      $i = new \Mpdf();
    }
    $this->setInstance($i);
- }
-
- protected function createHtml(){
-   if(!is_null($this->currentDisplayString)){
-     $this->pdfInstance->writeHTML($this->currentDisplayString);
-   }else{
-     throw new Exception;
-   }
  }
  #endregion
 }
