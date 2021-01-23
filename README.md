@@ -145,40 +145,44 @@ Font Name => Class ConstantPdfFonts::
 
 ### Font SerifPdfFonts
 
-- Deja Vu Condensed        => PdfFonts::SERIF_DEJAVU_CONDENSED
-- Serif                    => PdfFonts::SERIF_SERIF
-- Deja Vu Serif            => PdfFonts::SERIF_DEJAVU
-- Free                     => PdfFonts::SERIF_FREE
-- Liberation               => PdfFonts::SERIF_LIBERATION
-- Times New Roman          => PdfFonts::SERIF_TIMES_NEW_ROMAN
-- Times                    => PdfFonts::SERIF_TIMES
-- Century School Book      => PdfFonts::SERIF_CENTURY_SCHOOL_BOOK
-- Palatino Linotype        => PdfFonts::SERIF_PALATINO_LINOTYPE
-- Century Gothic           => PdfFonts::SERIF_CENTURY_GOTHIC
-- Bookman Old Style        => PdfFonts::SERIF_BOOKMAN_OLD_STYLE
-- Bookman Antiqua          => PdfFonts::SERIF_BOOK_ANTIQUA
-- Cyberbit                 => PdfFonts::SERIF_CYBERBIT
-- Cambria                  => PdfFonts::SERIF_CAMBRIA
-- Norasi                   => PdfFonts::SERIF_NORASI
-- Charis                   => PdfFonts::SERIF_CHARIS
-- Palatino                 => PdfFonts::SERIF_PALATINO
-- Constantia               => PdfFonts::SERIF_CONSTANTIA
-- Georgia                  => PdfFonts::SERIF_GEORGIA
-- Albertus                 => PdfFonts::SERIF_ALBERTUS
-- Xbzar                    => PdfFonts::SERIF_XBZAR
-- Algerian                 => PdfFonts::SERIF_ALGERIAN
-- Garamond                 => PdfFonts::SERIF_GARAMOND
+| Font Name | Constant |
+|-----------|----------|
+| Deja Vu Condensed | PdfFonts::SERIF_DEJAVU_CONDENSED |
+| Serif | PdfFonts::SERIF_SERIF |
+| Deja Vu Serif | PdfFonts::SERIF_DEJAVU |
+| Free | PdfFonts::SERIF_FREE |
+| Liberation | PdfFonts::SERIF_LIBERATION |
+| Times New Roman | PdfFonts::SERIF_TIMES_NEW_ROMAN |
+| Times | PdfFonts::SERIF_TIMES |
+| Century School Book | PdfFonts::SERIF_CENTURY_SCHOOL_BOOK |
+| Palatino Linotype | PdfFonts::SERIF_PALATINO_LINOTYPE |
+| Century Gothic | PdfFonts::SERIF_CENTURY_GOTHIC |
+| Bookman Old Style | PdfFonts::SERIF_BOOKMAN_OLD_STYLE |
+| Bookman Antiqua | PdfFonts::SERIF_BOOK_ANTIQUA |
+| Cyberbit | PdfFonts::SERIF_CYBERBIT |
+| Cambria | PdfFonts::SERIF_CAMBRIA |
+| Norasi | PdfFonts::SERIF_NORASI |
+| Charis | PdfFonts::SERIF_CHARIS |
+| Palatino | PdfFonts::SERIF_PALATINO |
+| Constantia | PdfFonts::SERIF_CONSTANTIA |
+| Georgia | PdfFonts::SERIF_GEORGIA |
+| Albertus | PdfFonts::SERIF_ALBERTUS |
+| Xbzar | PdfFonts::SERIF_XBZAR |
+| Algerian | PdfFonts::SERIF_ALGERIAN |
+| Garamond | PdfFonts::SERIF_GARAMOND |
 
 ### Font Mono
 
-- Deja Vu Sans             => PdfFonts::MONO_DEJAVUSANS
-- Mono                     => PdfFonts::MONO_MONO
-- Monospace                => PdfFonts::MONO_MONOSPACE
-- Free                     => PdfFonts::MONO_FREE
-- Liberation               => PdfFonts::MONO_LIBERATION
-- Courier                  => PdfFonts::MONO_COURIER
-- Ocrb                     => PdfFonts::MONO_OCRB
-- Ocr-b                    => PdfFonts::MONO_OCR_B
-- Lucida Console           => PdfFonts::MONO_LUCIDA_CONSOLE
-- Courier New              => PdfFonts::MONO_COURIER_NEW
-- Monotype Corsiva         => PdfFonts::MONO_MONOTYPE_CORSIVA
+| Font Name | Constant |
+|-----------|----------|
+| Deja Vu Sans | PdfFonts::MONO_DEJAVUSANS |
+| Mono | PdfFonts::MONO_MONO |
+| Monospace | PdfFonts::MONO_MONOSPACE |
+| Free | PdfFonts::MONO_FREE |
+| Liberation | PdfFonts::MONO_LIBERATION |
+| Courier | PdfFonts::MONO_COURIER |
+| Ocrb | PdfFonts::MONO_OCRB |
+| Ocr-b | PdfFonts::MONO_OCR_B |
+| Lucida Console | PdfFonts::MONO_LUCIDA_CONSOLE |
+| Courier New | PdfFonts::MONO_COURIER_NEW |
+| Monotype Corsiva | PdfFonts::MONO_MONOTYPE_CORSIVA |
