@@ -143,7 +143,7 @@ Font Name => Class ConstantPdfFonts::
 |Hobo | PdfFonts::SANS_HOBO |
 |Segoe Print | PdfFonts::SANS_SEGOE_PRINT |
 
-### Font SerifPdfFonts
+### Font Serif
 
 | Font Name | Constant |
 |-----------|----------|
