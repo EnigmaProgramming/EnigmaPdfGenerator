@@ -1,21 +1,13 @@
 <?php
 
 require_once 'tools.php';
-require_once 'formats.php';
-require_once 'orientations.php';
+require_once 'configs/formats.php';
+require_once 'configs/orientations.php';
 require_once 'vendor/autoload.php';
 
 class pdfGenerator{
  #region properties
- 
- /**
-  * contains the configurations required for the pdf instance
-  *
-  * @var array
-  */
-  protected $configs = [];
-
-  /**
+   /**
    * contains the instance created by the library used with composer
    *
    * @var class
@@ -39,11 +31,12 @@ class pdfGenerator{
  * @param string $format
  * @param string $orientation
  */
- public function __construct(string $format, string $orientation){
-  $this->customConfigs();
-  $this->setSingleConfig('format',$format);
-  $this->setSingleConfig('orientation',$orientation);
-  $this->pdfInstance = $this->createInstance();
+ public function __construct(array $configs = null){
+   if(!is_null($configs)){
+     $this->createInstance($configs);
+   }else{
+     $this->createInstance();
+   }
  }
 #endregion
 
@@ -53,21 +46,6 @@ class pdfGenerator{
  }
 
  #region Setters
-
- /**
-  * set the array of configs, used to set multiple configs at once
-  *
-  * @param array $configs
-  * @return void
-  */
- public function setConfigs(array $configs){
-   foreach($this->configs as $k => $v){
-     if($v != $configs[$k]){
-       $this->setSingleConfig($k,$configs[$k]);
-     }
-   }
- }
-
  /**
   * set a single config
   *
@@ -85,8 +63,8 @@ class pdfGenerator{
   * @param object $instance
   * @return void
   */
- public function setInstance(object $instance){
-   is_null($instance) ? $this->pdfInstance = $instance : null;
+ public function setInstance($instance){
+   $this->pdfInstance = $instance;
  }
 
  /**
@@ -140,32 +118,24 @@ class pdfGenerator{
  }
  #endregion
 
- public function createHtml(string $displayString = null){
-   if($displayString != null){
-     $this->pdfInstance->wirteHTML($displayString);
-     $this->currentDisplayString = $displayString;
+ public function createHtml(string $displayString = ""){
+  if(!empty($displayString)){
+    $this->pdfInstance->writeHTML($displayString);
+    $this->currentDisplayString = $displayString;
    }
 }
 
  #endregion
 
  #region protected functions
-
- /**
-  * serves to set the custom configurations
-  *
-  * @return void
-  */
- protected function customConfigs(){
-   $this->configs = $this->getCustomConstants();
- }
-
  /**
   * grabs the custom constants defined in the global array
   *
   * @return array
+  *
+  * Note: Not usable, was a good experiment tho.
   */
- protected function getCustomConstants(){
+/*  protected function getCustomConstants(){
    $tempUserConstants = get_defined_constants(true);
    $returnVal = [];
 
@@ -179,19 +149,20 @@ class pdfGenerator{
      $returnVal = $tArray;
    }
    return $returnVal;
- }
+ } */
 
  /**
   * create the pdf instance and assign it to the property
   *
   * @return void
   */
- protected function createInstance(){
-   if(!empty($this->configs)){
-     $i = new \Mpdf\Mpdf($this->configs);
-   }else{
-     $i = new \Mpdf();
-   }
+ protected function createInstance($configs = null){
+
+  if(!is_null($configs)){
+    $i = new \Mpdf\Mpdf($configs);
+  }else{
+    $i = new \Mpdf\Mpdf();
+  }
    $this->setInstance($i);
  }
  #endregion
