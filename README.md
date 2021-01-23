@@ -20,28 +20,55 @@ The system contains 44 formats, they are contained in the configs/formats.php fi
 
 ### List of supported Formats
 
-- A0
-- A10
-- B0
-- B10
-- C0
-- C10
-- 4A0
-- 2A0
-- RA0
-- RA4
-- SRA0
-- SRA4
-- LETTER
-- LEGAL
-- EXECUTIVE
-- FOLIO
-- DEMY
-- ROYAL
-- A
-- B
-- LEDGER
-- TABLOID
+### Portraits Formats
+
+- PdfFormats::A0
+- PdfFormats::A10
+- PdfFormats::B0
+- PdfFormats::B10
+- PdfFormats::C0
+- PdfFormats::C10
+- PdfFormats::4A0
+- PdfFormats::2A0
+- PdfFormats::RA0
+- PdfFormats::RA4
+- PdfFormats::SRA0
+- PdfFormats::SRA4
+- PdfFormats::LETTER
+- PdfFormats::LEGAL
+- PdfFormats::EXECUTIVE
+- PdfFormats::FOLIO
+- PdfFormats::DEMY
+- PdfFormats::ROYAL
+- PdfFormats::A
+- PdfFormats::B
+- PdfFormats::LEDGER
+- PdfFormats::TABLOID
+
+### Landscape Formats
+
+- PdfFormats::A0_LANDSCAPE
+- PdfFormats::A10_LANDSCAPE
+- PdfFormats::B0_LANDSCAPE
+- PdfFormats::B10_LANDSCAPE
+- PdfFormats::C0_LANDSCAPE
+- PdfFormats::C10_LANDSCAPE
+- PdfFormats::4A0_LANDSCAPE
+- PdfFormats::2A0_LANDSCAPE
+- PdfFormats::RA0_LANDSCAPE
+- PdfFormats::RA4_LANDSCAPE
+- PdfFormats::SRA0_LANDSCAPE
+- PdfFormats::SRA4_LANDSCAPE
+- PdfFormats::LETTER_LANDSCAPE
+- PdfFormats::LEGAL_LANDSCAPE
+- PdfFormats::EXECUTIVE_LANDSCAPE
+- PdfFormats::FOLIO_LANDSCAPE
+- PdfFormats::DEMY_LANDSCAPE
+- PdfFormats::ROYAL_LANDSCAPE
+- PdfFormats::A_LANDSCAPE
+- PdfFormats::B_LANDSCAPE
+- PdfFormats::LEDGER_LANDSCAPE
+- PdfFormats::TABLOID_LANDSCAPE
 
 Note: all those formats are also available in landscaping orientation in the same file.
 
@@ -49,8 +76,8 @@ Note: all those formats are also available in landscaping orientation in the sam
 
 The system contains the 2 normal orientations for formatting.
 
-- Portrait
-- Landscape
+- PdfOrientation::Portrait
+- PdfOrientation::Landscape
 
 the specific of those two are in the configs/orientations.php file.
 
@@ -69,79 +96,81 @@ Those two can be used without specifying the font you want to use.
 
 ### Fonts Sans
 
-- Deja Vu Condensed
-- Sans
-- Sans Serif
-- Cursive
-- Fantasy
-- Deja Vu
-- Free
-- Liberation
-- Arial
-- Helvetica
-- Verdana
-- Geneva
-- Lucida
-- Arial Narrow
-- Arial Black
-- Franklin
-- Franklin Gothic Book
-- Tahoma
-- Garuda
-- Calibri
-- Trebuchet
-- Lucida Grande
-- Microsoft Sans Serif
-- Trebuchet MS
-- Lucida Sans Unicode
-- Franklin Gothic Medium
-- Albertus Medium
-- Xbriyaz
-- Alba Super
-- Quill Script
-- Humanist 777
-- Humanist 777 Black
-- Humanist 777 Light
-- Futura
-- Hobo
-- Segoe Print
+Font Name => Class ConstantPdfFonts::
 
-### Font Serif
+- Deja Vu Condensed        => PdfFonts::SANS_DEJAVUCONDENSED
+- Sans                     => PdfFonts::SANS_SANS
+- Sans Serif               => PdfFonts::SANS_SERIF
+- Cursive                  => PdfFonts::SANS_CURSIVE
+- Fantasy                  => PdfFonts::SANS_FANTASY
+- Deja Vu                  => PdfFonts::SANS_DEJAVU
+- Free                     => PdfFonts::SANS_FREESANS
+- Liberation               => PdfFonts::SANS_LIBERATION
+- Arial                    => PdfFonts::SANS_ARIAL
+- Helvetica                => PdfFonts::SANS_HELVETICA
+- Verdana                  => PdfFonts::SANS_VERDANA
+- Geneva                   => PdfFonts::SANS_GENEVA
+- Lucida                   => PdfFonts::SANS_LUCIDA
+- Arial Narrow             => PdfFonts::SANS_ARIAL_NARROW
+- Arial Black              => PdfFonts::SANS_ARIAL_BLACK
+- Franklin                 => PdfFonts::SANS_FRANKLIN
+- Franklin Gothic Book     => PdfFonts::SANS_FRANKLIN_GOTHIC_BOOK
+- Tahoma                   => PdfFonts::SANS_TAHOMA
+- Garuda                   => PdfFonts::SANS_GARUDA
+- Calibri                  => PdfFonts::SANS_CALIBRI
+- Trebuchet                => PdfFonts::SANS_TREBUCHET
+- Lucida Grande            => PdfFonts::SANS_LUCIDA_GRANDE
+- Microsoft Sans Serif     => PdfFonts::SANS_MICROSOFT_SANS_SERIF
+- Trebuchet MS             => PdfFonts::SANS_TREBUCHETMS
+- Lucida Sans Unicode      => PdfFonts::SANS_LUCIDASANSUNICODE
+- Franklin Gothic Medium   => PdfFonts::SANS_FRANKLIN_GOTHIC_MEDIUM
+- Albertus Medium          => PdfFonts::SANS_ALBERTUS_MEDIUM
+- Xbriyaz                  => PdfFonts::SANS_XBRIYAZ
+- Alba Super               => PdfFonts::SANS_ALBASUPER
+- Quill Script             => PdfFonts::SANS_QUILL_SCRIPT
+- Humanist 777             => PdfFonts::SANS_HUMANIST777
+- Humanist 777 Black       => PdfFonts::SANS_HUMANIST777_BLACK
+- Humanist 777 Light       => PdfFonts::SANS_HUMANIST777_LIGHT
+- Futura                   => PdfFonts::SANS_FUTURA
+- Hobo                     => PdfFonts::SANS_HOBO
+- Segoe Print              => PdfFonts::SANS_SEGOE_PRINT
 
-- Deja Vu Condensed
-- Serif
-- Deja Vu Serif
-- Free
-- Liberation
-- Times New Roman
-- Times
-- Century School Book
-- Palatino Linotype
-- Century Gothic
-- Bookman Old Style
-- Bookman Antiqua
-- Cyberbit
-- Cambria
-- Norasi
-- Charis
-- Palatino
-- Constantia
-- Georgia
-- Albertus
-- Xbzar
-- Algerian
-- Garamond
+### Font SerifPdfFonts
+
+- Deja Vu Condensed        => PdfFonts::SERIF_DEJAVU_CONDENSED
+- Serif                    => PdfFonts::SERIF_SERIF
+- Deja Vu Serif            => PdfFonts::SERIF_DEJAVU
+- Free                     => PdfFonts::SERIF_FREE
+- Liberation               => PdfFonts::SERIF_LIBERATION
+- Times New Roman          => PdfFonts::SERIF_TIMES_NEW_ROMAN
+- Times                    => PdfFonts::SERIF_TIMES
+- Century School Book      => PdfFonts::SERIF_CENTURY_SCHOOL_BOOK
+- Palatino Linotype        => PdfFonts::SERIF_PALATINO_LINOTYPE
+- Century Gothic           => PdfFonts::SERIF_CENTURY_GOTHIC
+- Bookman Old Style        => PdfFonts::SERIF_BOOKMAN_OLD_STYLE
+- Bookman Antiqua          => PdfFonts::SERIF_BOOK_ANTIQUA
+- Cyberbit                 => PdfFonts::SERIF_CYBERBIT
+- Cambria                  => PdfFonts::SERIF_CAMBRIA
+- Norasi                   => PdfFonts::SERIF_NORASI
+- Charis                   => PdfFonts::SERIF_CHARIS
+- Palatino                 => PdfFonts::SERIF_PALATINO
+- Constantia               => PdfFonts::SERIF_CONSTANTIA
+- Georgia                  => PdfFonts::SERIF_GEORGIA
+- Albertus                 => PdfFonts::SERIF_ALBERTUS
+- Xbzar                    => PdfFonts::SERIF_XBZAR
+- Algerian                 => PdfFonts::SERIF_ALGERIAN
+- Garamond                 => PdfFonts::SERIF_GARAMOND
 
 ### Font Mono
 
-- Deja Vu Sans
-- Mono
-- Monospace
-- Free
-- Liberation
-- Courier
-- Ocrb
-- Ocr-b
-- Lucida Console
-- Courier New
-- Monotype Corsiva
+- Deja Vu Sans             => PdfFonts::MONO_DEJAVUSANS
+- Mono                     => PdfFonts::MONO_MONO
+- Monospace                => PdfFonts::MONO_MONOSPACE
+- Free                     => PdfFonts::MONO_FREE
+- Liberation               => PdfFonts::MONO_LIBERATION
+- Courier                  => PdfFonts::MONO_COURIER
+- Ocrb                     => PdfFonts::MONO_OCRB
+- Ocr-b                    => PdfFonts::MONO_OCR_B
+- Lucida Console           => PdfFonts::MONO_LUCIDA_CONSOLE
+- Courier New              => PdfFonts::MONO_COURIER_NEW
+- Monotype Corsiva         => PdfFonts::MONO_MONOTYPE_CORSIVA
