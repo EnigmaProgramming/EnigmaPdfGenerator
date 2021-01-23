@@ -1,4 +1,4 @@
-# php_pdfgenerator
+# EnigmaPdfGenerator
 
 This project is a wrapper around the Mpdf project.
 
