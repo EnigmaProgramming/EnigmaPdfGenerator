@@ -22,28 +22,30 @@ The system contains 44 formats, they are contained in the configs/formats.php fi
 
 ### Portraits Formats
 
-- A0                       => PdfFormats::F_A0
-- A10                      => PdfFormats::F_A10
-- B0                       => PdfFormats::F_B0
-- B10                      => PdfFormats::F_B10
-- C0                       => PdfFormats::F_C0
-- C10                      => PdfFormats::F_C10
-- 4A0                      => PdfFormats::F_4A0
-- 2A0                      => PdfFormats::F_2A0
-- RA0                      => PdfFormats::F_RA0
-- RA4                      => PdfFormats::F_RA4
-- SRA0                     => PdfFormats::F_SRA0
-- SRA4                     => PdfFormats::F_SRA4
-- LETTER                   => PdfFormats::F_LETTER
-- LEGAL                    => PdfFormats::F_LEGAL
-- EXECUTIVE                => PdfFormats::F_EXECUTIVE
-- FOLIO                    => PdfFormats::F_FOLIO
-- DEMY                     => PdfFormats::F_DEMY
-- ROYAL                    => PdfFormats::F_ROYAL
-- A                        => PdfFormats::F_A
-- B                        => PdfFormats::F_B
-- LEDGER                   => PdfFormats::F_LEDGER
-- TABLOID                  => PdfFormats::F_TABLOID
+| Format        | Constant                 |
+|---------------|--------------------------|
+| A0            | PdfFormats::F_A0         |
+| A10           | PdfFormats::F_A10        |
+| B0            | PdfFormats::F_B0         |
+| B10           | PdfFormats::F_B10        |
+| C0            | PdfFormats::F_C0         |
+| C10           | PdfFormats::F_C10        |
+| 4A0           | PdfFormats::F_4A0        |
+| 2A0           | PdfFormats::F_2A0        |
+| RA0           | PdfFormats::F_RA0        |
+| RA4           | PdfFormats::F_RA4        |
+| SRA0          | PdfFormats::F_SRA0       |
+| SRA4          | PdfFormats::F_SRA4       |
+| LETTER        | PdfFormats::F_LETTER     |
+| LEGAL         | PdfFormats::F_LEGAL      |
+| EXECUTIVE     | PdfFormats::F_EXECUTIVE  |
+| FOLIO         | PdfFormats::F_FOLIO      |
+| DEMY          | PdfFormats::F_DEMY       |
+| ROYAL         | PdfFormats::F_ROYAL      |
+| A             | PdfFormats::F_A          |
+| B             | PdfFormats::F_B          |
+| LEDGER        | PdfFormats::F_LEDGER     |
+| TABLOID       | PdfFormats::F_TABLOID    |
 
 ### Landscape Formats
 
