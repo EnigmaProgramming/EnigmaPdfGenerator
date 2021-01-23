@@ -22,62 +22,60 @@ The system contains 44 formats, they are contained in the configs/formats.php fi
 
 ### Portraits Formats
 
-- PdfFormats::A0
-- PdfFormats::A10
-- PdfFormats::B0
-- PdfFormats::B10
-- PdfFormats::C0
-- PdfFormats::C10
-- PdfFormats::4A0
-- PdfFormats::2A0
-- PdfFormats::RA0
-- PdfFormats::RA4
-- PdfFormats::SRA0
-- PdfFormats::SRA4
-- PdfFormats::LETTER
-- PdfFormats::LEGAL
-- PdfFormats::EXECUTIVE
-- PdfFormats::FOLIO
-- PdfFormats::DEMY
-- PdfFormats::ROYAL
-- PdfFormats::A
-- PdfFormats::B
-- PdfFormats::LEDGER
-- PdfFormats::TABLOID
+- A0                       => PdfFormats::F_A0
+- A10                      => PdfFormats::F_A10
+- B0                       => PdfFormats::F_B0
+- B10                      => PdfFormats::F_B10
+- C0                       => PdfFormats::F_C0
+- C10                      => PdfFormats::F_C10
+- 4A0                      => PdfFormats::F_4A0
+- 2A0                      => PdfFormats::F_2A0
+- RA0                      => PdfFormats::F_RA0
+- RA4                      => PdfFormats::F_RA4
+- SRA0                     => PdfFormats::F_SRA0
+- SRA4                     => PdfFormats::F_SRA4
+- LETTER                   => PdfFormats::F_LETTER
+- LEGAL                    => PdfFormats::F_LEGAL
+- EXECUTIVE                => PdfFormats::F_EXECUTIVE
+- FOLIO                    => PdfFormats::F_FOLIO
+- DEMY                     => PdfFormats::F_DEMY
+- ROYAL                    => PdfFormats::F_ROYAL
+- A                        => PdfFormats::F_A
+- B                        => PdfFormats::F_B
+- LEDGER                   => PdfFormats::F_LEDGER
+- TABLOID                  => PdfFormats::F_TABLOID
 
 ### Landscape Formats
 
-- PdfFormats::A0_LANDSCAPE
-- PdfFormats::A10_LANDSCAPE
-- PdfFormats::B0_LANDSCAPE
-- PdfFormats::B10_LANDSCAPE
-- PdfFormats::C0_LANDSCAPE
-- PdfFormats::C10_LANDSCAPE
-- PdfFormats::4A0_LANDSCAPE
-- PdfFormats::2A0_LANDSCAPE
-- PdfFormats::RA0_LANDSCAPE
-- PdfFormats::RA4_LANDSCAPE
-- PdfFormats::SRA0_LANDSCAPE
-- PdfFormats::SRA4_LANDSCAPE
-- PdfFormats::LETTER_LANDSCAPE
-- PdfFormats::LEGAL_LANDSCAPE
-- PdfFormats::EXECUTIVE_LANDSCAPE
-- PdfFormats::FOLIO_LANDSCAPE
-- PdfFormats::DEMY_LANDSCAPE
-- PdfFormats::ROYAL_LANDSCAPE
-- PdfFormats::A_LANDSCAPE
-- PdfFormats::B_LANDSCAPE
-- PdfFormats::LEDGER_LANDSCAPE
-- PdfFormats::TABLOID_LANDSCAPE
-
-Note: all those formats are also available in landscaping orientation in the same file.
+- A0                       => PdfFormats::F_A0_LANDSCAPE
+- A10                      => PdfFormats::F_A10_LANDSCAPE
+- B0                       => PdfFormats::F_B0_LANDSCAPE
+- B10                      => PdfFormats::F_B10_LANDSCAPE
+- C0                       => PdfFormats::F_C0_LANDSCAPE
+- C10                      => PdfFormats::F_C10_LANDSCAPE
+- 4A0                      => PdfFormats::F_4A0_LANDSCAPE
+- 2A0                      => PdfFormats::F_2A0_LANDSCAPE
+- RA0                      => PdfFormats::F_RA0_LANDSCAPE
+- RA4                      => PdfFormats::F_RA4_LANDSCAPE
+- SRA0                     => PdfFormats::F_SRA0_LANDSCAPE
+- SRA4                     => PdfFormats::F_SRA4_LANDSCAPE
+- LETTER                   => PdfFormats::F_LETTER_LANDSCAPE
+- LEGAL                    => PdfFormats::F_LEGAL_LANDSCAPE
+- EXECUTIVE                => PdfFormats::F_EXECUTIVE_LANDSCAPE
+- FOLIO                    => PdfFormats::F_FOLIO_LANDSCAPE
+- DEMY                     => PdfFormats::F_DEMY_LANDSCAPE
+- ROYAL                    => PdfFormats::F_ROYAL_LANDSCAPE
+- A                        => PdfFormats::F_A_LANDSCAPE
+- B                        => PdfFormats::F_B_LANDSCAPE
+- LEDGER                   => PdfFormats::F_LEDGER_LANDSCAPE
+- TABLOID                  => PdfFormats::F_TABLOID_LANDSCAPE
 
 ## Orientations
 
 The system contains the 2 normal orientations for formatting.
 
-- PdfOrientation::Portrait
-- PdfOrientation::Landscape
+- Portrait                 => PdfOrientation::O_Portrait
+- LAndscape                => PdfOrientation::O_Landscape
 
 the specific of those two are in the configs/orientations.php file.
 
@@ -87,8 +85,8 @@ The system contains multiple fonts and two base.
 
 ### Base
 
-- Core
-- Unicode
+- Core                     => PdfFonts::CORE
+- Unicode                  => PdfFonts::UNICODE
 
 Those two can be used without specifying the font you want to use.
 
