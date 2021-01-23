@@ -49,35 +49,39 @@ The system contains 44 formats, they are contained in the configs/formats.php fi
 
 ### Landscape Formats
 
-- A0                       => PdfFormats::F_A0_LANDSCAPE
-- A10                      => PdfFormats::F_A10_LANDSCAPE
-- B0                       => PdfFormats::F_B0_LANDSCAPE
-- B10                      => PdfFormats::F_B10_LANDSCAPE
-- C0                       => PdfFormats::F_C0_LANDSCAPE
-- C10                      => PdfFormats::F_C10_LANDSCAPE
-- 4A0                      => PdfFormats::F_4A0_LANDSCAPE
-- 2A0                      => PdfFormats::F_2A0_LANDSCAPE
-- RA0                      => PdfFormats::F_RA0_LANDSCAPE
-- RA4                      => PdfFormats::F_RA4_LANDSCAPE
-- SRA0                     => PdfFormats::F_SRA0_LANDSCAPE
-- SRA4                     => PdfFormats::F_SRA4_LANDSCAPE
-- LETTER                   => PdfFormats::F_LETTER_LANDSCAPE
-- LEGAL                    => PdfFormats::F_LEGAL_LANDSCAPE
-- EXECUTIVE                => PdfFormats::F_EXECUTIVE_LANDSCAPE
-- FOLIO                    => PdfFormats::F_FOLIO_LANDSCAPE
-- DEMY                     => PdfFormats::F_DEMY_LANDSCAPE
-- ROYAL                    => PdfFormats::F_ROYAL_LANDSCAPE
-- A                        => PdfFormats::F_A_LANDSCAPE
-- B                        => PdfFormats::F_B_LANDSCAPE
-- LEDGER                   => PdfFormats::F_LEDGER_LANDSCAPE
-- TABLOID                  => PdfFormats::F_TABLOID_LANDSCAPE
+|Format       | Constant                          |
+|-------------|-----------------------------------|
+| A0          | PdfFormats::F_A0_LANDSCAPE        |
+| A10         | PdfFormats::F_A10_LANDSCAPE       |
+| B0          | PdfFormats::F_B0_LANDSCAPE        |
+| B10         | PdfFormats::F_B10_LANDSCAPE       |
+| C0          | PdfFormats::F_C0_LANDSCAPE        |
+| C10         | PdfFormats::F_C10_LANDSCAPE       |
+| 4A0         | PdfFormats::F_4A0_LANDSCAPE       |
+| 2A0         | PdfFormats::F_2A0_LANDSCAPE       |
+| RA0         | PdfFormats::F_RA0_LANDSCAPE       |
+| RA4         | PdfFormats::F_RA4_LANDSCAPE       |
+| SRA0        | PdfFormats::F_SRA0_LANDSCAPE      |
+| SRA4        | PdfFormats::F_SRA4_LANDSCAPE      |
+| LETTER      | PdfFormats::F_LETTER_LANDSCAPE    |
+| LEGAL       | PdfFormats::F_LEGAL_LANDSCAPE     |
+| EXECUTIVE   | PdfFormats::F_EXECUTIVE_LANDSCAPE |
+| FOLIO       | PdfFormats::F_FOLIO_LANDSCAPE     |
+| DEMY        | PdfFormats::F_DEMY_LANDSCAPE      |
+| ROYAL       | PdfFormats::F_ROYAL_LANDSCAPE     |
+| A           | PdfFormats::F_A_LANDSCAPE         |
+| B           | PdfFormats::F_B_LANDSCAPE         |
+| LEDGER      | PdfFormats::F_LEDGER_LANDSCAPE    |
+| TABLOID     | PdfFormats::F_TABLOID_LANDSCAPE   |
 
 ## Orientations
 
 The system contains the 2 normal orientations for formatting.
 
-- Portrait                 => PdfOrientation::O_Portrait
-- LAndscape                => PdfOrientation::O_Landscape
+| Orientation | Constant                     |
+|-------------|------------------------------|
+| Portrait    | PdfOrientation::O_Portrait   |
+| Landscape   | PdfOrientation::O_Landscape  |
 
 the specific of those two are in the configs/orientations.php file.
 
@@ -87,8 +91,10 @@ The system contains multiple fonts and two base.
 
 ### Base
 
-- Core                     => PdfFonts::CORE
-- Unicode                  => PdfFonts::UNICODE
+| Base    | Constant          |
+|---------|-------------------|
+| Core    | PdfFonts::CORE    |
+| Unicode | PdfFonts::UNICODE |
 
 Those two can be used without specifying the font you want to use.
 
@@ -98,42 +104,44 @@ Those two can be used without specifying the font you want to use.
 
 Font Name => Class ConstantPdfFonts::
 
-- Deja Vu Condensed        => PdfFonts::SANS_DEJAVUCONDENSED
-- Sans                     => PdfFonts::SANS_SANS
-- Sans Serif               => PdfFonts::SANS_SERIF
-- Cursive                  => PdfFonts::SANS_CURSIVE
-- Fantasy                  => PdfFonts::SANS_FANTASY
-- Deja Vu                  => PdfFonts::SANS_DEJAVU
-- Free                     => PdfFonts::SANS_FREESANS
-- Liberation               => PdfFonts::SANS_LIBERATION
-- Arial                    => PdfFonts::SANS_ARIAL
-- Helvetica                => PdfFonts::SANS_HELVETICA
-- Verdana                  => PdfFonts::SANS_VERDANA
-- Geneva                   => PdfFonts::SANS_GENEVA
-- Lucida                   => PdfFonts::SANS_LUCIDA
-- Arial Narrow             => PdfFonts::SANS_ARIAL_NARROW
-- Arial Black              => PdfFonts::SANS_ARIAL_BLACK
-- Franklin                 => PdfFonts::SANS_FRANKLIN
-- Franklin Gothic Book     => PdfFonts::SANS_FRANKLIN_GOTHIC_BOOK
-- Tahoma                   => PdfFonts::SANS_TAHOMA
-- Garuda                   => PdfFonts::SANS_GARUDA
-- Calibri                  => PdfFonts::SANS_CALIBRI
-- Trebuchet                => PdfFonts::SANS_TREBUCHET
-- Lucida Grande            => PdfFonts::SANS_LUCIDA_GRANDE
-- Microsoft Sans Serif     => PdfFonts::SANS_MICROSOFT_SANS_SERIF
-- Trebuchet MS             => PdfFonts::SANS_TREBUCHETMS
-- Lucida Sans Unicode      => PdfFonts::SANS_LUCIDASANSUNICODE
-- Franklin Gothic Medium   => PdfFonts::SANS_FRANKLIN_GOTHIC_MEDIUM
-- Albertus Medium          => PdfFonts::SANS_ALBERTUS_MEDIUM
-- Xbriyaz                  => PdfFonts::SANS_XBRIYAZ
-- Alba Super               => PdfFonts::SANS_ALBASUPER
-- Quill Script             => PdfFonts::SANS_QUILL_SCRIPT
-- Humanist 777             => PdfFonts::SANS_HUMANIST777
-- Humanist 777 Black       => PdfFonts::SANS_HUMANIST777_BLACK
-- Humanist 777 Light       => PdfFonts::SANS_HUMANIST777_LIGHT
-- Futura                   => PdfFonts::SANS_FUTURA
-- Hobo                     => PdfFonts::SANS_HOBO
-- Segoe Print              => PdfFonts::SANS_SEGOE_PRINT
+| Font Name | Constant |
+|-----------|----------|
+|Deja Vu Condensed | PdfFonts::SANS_DEJAVUCONDENSED |
+|Sans  | PdfFonts::SANS_SANS |
+|Sans Serif | PdfFonts::SANS_SERIF |
+|Cursive | PdfFonts::SANS_CURSIVE |
+|Fantasy | PdfFonts::SANS_FANTASY |
+|Deja Vu | PdfFonts::SANS_DEJAVU |
+|Free | PdfFonts::SANS_FREESANS |
+|Liberation | PdfFonts::SANS_LIBERATION |
+|Arial | PdfFonts::SANS_ARIAL |
+|Helvetica | PdfFonts::SANS_HELVETICA |
+|Verdana | PdfFonts::SANS_VERDANA |
+|Geneva | PdfFonts::SANS_GENEVA |
+|Lucida | PdfFonts::SANS_LUCIDA |
+|Arial Narrow | PdfFonts::SANS_ARIAL_NARROW |
+|Arial Black | PdfFonts::SANS_ARIAL_BLACK |
+|Franklin | PdfFonts::SANS_FRANKLIN |
+|Franklin Gothic Book | PdfFonts::SANS_FRANKLIN_GOTHIC_BOOK |
+|Tahoma | PdfFonts::SANS_TAHOMA |
+|Garuda | PdfFonts::SANS_GARUDA |
+|Calibri | PdfFonts::SANS_CALIBRI |
+|Trebuchet | PdfFonts::SANS_TREBUCHET |
+|Lucida Grande | PdfFonts::SANS_LUCIDA_GRANDE |
+|Microsoft Sans Serif | PdfFonts::SANS_MICROSOFT_SANS_SERIF |
+|Trebuchet MS | PdfFonts::SANS_TREBUCHETMS |
+|Lucida Sans Unicode | PdfFonts::SANS_LUCIDASANSUNICODE |
+|Franklin Gothic Medium | PdfFonts::SANS_FRANKLIN_GOTHIC_MEDIUM |
+|Albertus Medium | PdfFonts::SANS_ALBERTUS_MEDIUM |
+|Xbriyaz | PdfFonts::SANS_XBRIYAZ |
+|Alba Super | PdfFonts::SANS_ALBASUPER |
+|Quill Script | PdfFonts::SANS_QUILL_SCRIPT |
+|Humanist 777 | PdfFonts::SANS_HUMANIST777 |
+|Humanist 777 Black |  PdfFonts::SANS_HUMANIST777_BLACK |
+|Humanist 777 Light | PdfFonts::SANS_HUMANIST777_LIGHT |
+|Futura | PdfFonts::SANS_FUTURA |
+|Hobo | PdfFonts::SANS_HOBO |
+|Segoe Print | PdfFonts::SANS_SEGOE_PRINT |
 
 ### Font SerifPdfFonts
 
